@@ -185,24 +185,3 @@ cd /tmp/wsl-setup
 
 > `setup.sh` 自身の中から自分自身やセットアップディレクトリを削除する方式は、失敗時の調査や再実行がしづらくなるため採用していません。
 
----
-
-## ディレクトリ構成
-
-```text
-wsl-setup/
-├── README.md
-├── setup.sh
-└── dotfiles/
-    └── .zshrc
-```
-
----
-
-## 注意
-
-- `.zshrc` は `dotfiles/.zshrc` の内容で上書きされます。
-- SSH 秘密鍵、GitHub Token、API Key などの秘密情報はこのリポジトリに保存しないでください。
-- Docker は Windows 側の Docker Desktop を利用する前提です。
-- GitHub CLI の認証 (`gh auth login`) は手動で行います。
-- Docker Desktop の WSL Integration も Windows 側で有効化してください。
