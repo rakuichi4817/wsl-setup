@@ -13,6 +13,7 @@ Ubuntu on WSL を新規作成したあとに、普段使う開発ツールをま
 - mise
 - direnv
 - GitHub CLI (`gh`)
+- GitHub Stacked PRs (`gh stack` 拡張)
 - OpenCode
 - 日本語ロケール (`ja_JP.UTF-8`)
 - `.zshrc`
@@ -145,6 +146,7 @@ zsh --version
 mise --version
 direnv version
 gh --version
+gh stack --version
 opencode --version
 docker --version
 ```
