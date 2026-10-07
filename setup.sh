@@ -126,6 +126,18 @@ else
 fi
 
 # ------------------------------
+# gh stack extension
+# ------------------------------
+echo
+echo "==> Installing gh stack extension..."
+
+if gh extension list | grep -qF 'github/gh-stack'; then
+  echo "✓ gh stack extension already installed"
+else
+  gh extension install github/gh-stack
+fi
+
+# ------------------------------
 # OpenCode
 # ------------------------------
 echo
@@ -203,6 +215,9 @@ command -v direnv >/dev/null 2>&1 \
 
 command -v gh >/dev/null 2>&1 \
   && echo "✓ GitHub CLI $(gh --version | head -n 1)"
+
+gh extension list | grep -qF 'github/gh-stack' \
+  && echo "✓ gh stack   $(gh stack --version)"
 
 command -v opencode >/dev/null 2>&1 \
   && echo "✓ OpenCode   $(opencode --version)"
